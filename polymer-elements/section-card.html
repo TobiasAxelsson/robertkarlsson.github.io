@@ -1,0 +1,56 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+  <link rel="import" href="../bower_components/core-icons/social-icons.html">
+
+<link rel="import" href="../bower_components/core-icon-button/core-icon-button.html">
+
+<polymer-element name="section-card">
+  <template>
+    <style>
+      :host {
+        display:block;
+        position: relative;
+        background-color:white;
+        padding: 20px;
+        width: 100%;
+        margin: 20px;
+        font-size: 1.2rem;
+        font-weight: 300;
+      }
+      
+      .card-header { 
+        margin-bottom 10px;
+      }
+    
+      polyfill-next-selector { content: '.card-header h2'; }
+      .card-header ::content h2 {
+        margin: 0;
+        font-size: 1.8rem;
+        font-weight: 300;
+        
+      }
+      
+      polyfill-next-selector { content: '.card-header div'; }
+      .card-header ::content div{
+        width: 50px;
+        border-radius: 50%;
+        background-color:cyan;
+        margin: 10px;
+        height: 50px;
+      }
+      
+      polyfill-next-selector { content: 'p'; }
+       
+    </style>
+    
+    <div class="card-header" layout horizontal center>
+      <content select="div"></content>
+      <content select="h2"></content>
+    </div>
+    <content select="p"></content>
+    
+  </template>
+  <script>
+  Polymer ({});
+  </script>
+</polymer-element>
