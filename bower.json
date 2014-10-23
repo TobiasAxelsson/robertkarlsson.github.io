@@ -1,0 +1,23 @@
+{
+  "name": "robertkarlsson.github.io",
+  "version": "0.0.0",
+  "homepage": "https://github.com/robertkarlsson/robertkarlsson.github.io",
+  "authors": [
+    "Robert Karlsson <robert.karlsson@zocom.se>"
+  ],
+  "description": "My GitHub Page",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.4.2",
+    "core-toolbar": "Polymer/core-toolbar#~0.4.2",
+    "paper-icon-button": "Polymer/paper-icon-button#~0.4.2",
+    "normalize.css": "~3.0.2"
+  }
+}
