@@ -4,22 +4,36 @@ html,body {
     background-color: #E5E5E5;
     font-family: 'RobotoDraft', sans-serif;
   }
+
+  .core-header.tall {
+    height: 180px;
+  }
   
+  core-header-panel {
+    height: 100%;
+  }
+
+  core-header-toolbar {
+    height: 100%;
+  }
   core-toolbar {
     background: #03a9f4;
     color: white;
   }
-  #tabs {
-    width: 100%;
-    margin: 0;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
-  .container {
+   .container {
     width: 80%;
-    margin: 50px auto;
+    margin: 0 auto;
+  }
+
+  .big {
+    width: 100%;
+    
+  }
+
+ 
+
+  .topanimation {
+  background-color: #03a9f4;
   }
   @media (min-width: 481px) {
     #tabs {
