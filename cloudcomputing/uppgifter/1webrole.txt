@@ -1,0 +1,68 @@
+I den här övningen ska ni följa några kortare instruktioner för att skapa en cloud service 
+från visual studio för att sedan pusha upp den i azure. Instruktionerna är uppdelad i tre delar
+där denna del ger stegen för att skapa en enkel Web Role. Näst del går in på Worker Roles
+och Service Bus och den tredje delen går igenom Table Storage.
+
+Appen ni kommer att göra är väldigt enkelt och är bara till för att visa hur man sätter upp en
+cloud service. Det ni kommer att ha i slutändan är En sida där personer kan skriva in
+sin email och den sparas i en databas av en worker role. Detta är en introduktion till den
+teknik ni ska använda på Projektarbetet.
+
+Instruktionerna börjar nedan, stöter ni på några problem så hojta till!
+
+-Skapa en ny MVC-applikation (senaste versionen). Koppla ej på azure direkt
+
+-Kör applikationen och se så att allt fungerar
+
+-Högerklicka på ditt projekt i Visual Studio, convert, convert to cloud applikation. Detta gör att 
+vi får ett litet moln i vår solution explorer. Högerklicka på detta och väl "set as startup" för att få det
+att launcha när du kör applikationen
+
+-Kör applikationen igen och titta i meddelandefältet (oftast längst ner till höger på windows, vid klockan) 
+och öppna "Compute Emulator UI". I den, klicka på ert projekt och sedan namnet på er mvcapplikation. Detta kommer
+tillsammans med Azure SDK och Emulerar en molntjänst. Klicka på ert projekt så ska ni se en konsol. Detta är den
+virtuella instans er Web Role körs i.
+
+- I din solution explorer, högerklicka på molnet och välj publish. Bind nu ditt azurekonto om du inte gjort det redan och publicera 
+sidan online. Frågar den efter en användare kan du logga in på ditt azurekonto, gå in på portalen och ladda ned din "publish profile".
+Ladda sedan in filen där den frågas efter i visual studio. Att publicera en cloud service på azure för första gången kan ta
+lite tid så ha tålamod. Hur det går kan ni se i fliken Microsoft Azure Activity Role i Visual Studio.
+
+- Lägg till en metod med namnet Newsletter i /controllers/HomeController.cs. Metoden ska ta emot en email från ett formulär
+med POST.
+
+  [HttpPost]
+        public ActionResult Newsletter(string email)
+        {
+            ViewBag.email = email;
+
+            return View();
+        }
+
+- Updatera Indexmetoden med följande:
+
+   public ActionResult Index()
+        {
+            ViewBag.Message = "Newsletter Signups";
+            return View();
+        }
+
+- Ändra i /views/index.cshtml och ta bort den bolierplatekod som finns. Lämna kvar rubrikområdet.
+Har du valt MVC-applikationen med bootstrap finns det en Jumbotron där du kan byta ut texten i rubriken (<h1>) till ViewBag.Message, 
+annats byter du bara ut det som skriver ut rubriken till samma, alltså ViewBag.Message.
+Lägg sedan till ett formulär med ett inputfält, action på /Home/Newsletter och metoden "post". Detta gör så att vi kan skicka data
+till backend från frontend.
+
+<form action="/Home/Newsletter" method="post">
+    @Html.TextBox("email");
+    <input type="submit" value="Singup" />
+</form>
+
+- Lägg till en ny view i /Views/Home med namnet "Newsletter" och lägg till HTML för att tacka för att användaren subscribat till ditt newsletter
+
+<article>
+    Thank you for signing up for the Newsletter we will use <b>@ViewBag.email</b> to contact you.
+</article>
+
+
+

@@ -1,0 +1,74 @@
+För att koppla ihop vår cloud application med en databas
+
+DETTA SKA GÖRAS I DIN WORKER ROLE
+
+- Gå in på azureportalen och kolla så att du har något under fliken "storage".
+Det bör heta samma som vår cloud application då den ska ha skapats när vi
+publishade vår första version av projekt.Om du inte har det, skapa en ny storage.
+
+- När du väl har tillgång till den, öppna den och klicka på Manage Acces Keys.
+Gör så som du gjorde tidigare i projektet för att koppla din Servicebus, byt
+type från string till connectionstring. Lägg in de uppgifter du ser på portalen.
+
+- Skapa en ny klassvariabel som håller i denna connectionstring, precis som du gjort med din servicebus.
+
+	string tableConnectionString = CloudConfigurationManager.GetSetting("TableStorageConnection");
+
+- Skapa sedan en ny klass som ska representera det objekt vi ska lägga in i
+vår storage. Typen av storage vi kommer att använda för denna uppgift
+är tablestorage. Döp klassen till Person.cs.
+
+I Person.cs Lägg till en namespace reference till Microsoft.WindowsAzure.Storage.Table.
+
+Lägg sedan till följande kod:
+
+namespace SignupsWorker
+{
+    class Person:TableEntity
+    {
+         public Person(string email)
+        {
+            this.PartitionKey = "signups";
+            this.RowKey = email;
+        }
+
+    public Person() { }
+
+    public string Email { get; set; }
+
+  
+    }
+}
+
+Vi ärver av tableenitity för att kunna lägga in det i vår storage, säger att den ska tillhöra paritionkey och att
+rowkey ska vara email. Dessa två behövs för att vi inte ska få ett 400 svar från servern.
+
+- Gå tillbaka till din WokerRole.cs och lägg till en namespacereference till Microsoft.WindowsAzure.Storage.Table.
+Låt Microsoft.WindowsAzure.Storage vara kvar då vi behöver båda.
+
+- Implementera en funktion SaveToStorage enligt följande:
+
+         private void SaveToStorage(string email)
+        {
+	    //det namn vår table ska ha
+            string tableName = "signups";
+            //Connection till table storage account
+            CloudStorageAccount account = CloudStorageAccount.Parse(tableConnectionString);
+            //Klient för table storage
+            CloudTableClient tableStorage = account.CreateCloudTableClient();
+	    //Hämta en reference till tablen, om inte finns, skapa table
+            CloudTable table = tableStorage.GetTableReference(tableName);
+            table.CreateIfNotExists();
+
+	    //Skapar den entitet som ska in i storage
+            Person person = new Person(email);
+            person.Email = email;
+
+            //Sparar personen i signups table
+            TableOperation insertOperation = TableOperation.Insert(person);
+            table.Execute(insertOperation);
+            
+        }
+
+- Sist men inte minst, efter msg.Complete(), kalla på din nya metod med SaveToStorage med följande kod:
+	SaveToStorage(msg.Properties["email"].ToString());

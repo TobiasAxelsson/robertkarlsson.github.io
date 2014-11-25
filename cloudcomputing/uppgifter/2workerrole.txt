@@ -1,0 +1,120 @@
+- Lägg till in ny Worker Role till din service med namnet SignupsWorker 
+Detta är en så kallas "background processing service" och kan hantera inkommande
+requests i flera olika instanser. När du skapat denna bör du finnas en
+WorkerRole.cs-fil. I denna, leta upp whileloopen. 
+Denna kan se lite annorlunda ut beroende på vilken version du har.
+Nedanför visar jag två alternativt
+
+            while (!cancellationToken.IsCancellationRequested)
+            {
+                Trace.TraceInformation("Working");
+                await Task.Delay(10000);
+            }
+
+eller
+
+            while (true)
+            {
+                Thread.Sleep(10000);
+                Trace.TraceInformation("Something", "Information");
+            }
+
+
+byt ut texten i Trace.TraceInformation "Processing Signups..".
+Det är med denna workerrole vi kommer att skriva till vårt storage senare.
+
+- Tillbaka till din mvcapplikation
+
+- Lägg till en reference till Microsoft.Servicebus med Manage NuGet Packages och sök
+efter servicebus. Du bör då hitta "Microsoft Azure Service Bus", installera denna om den inte redan
+är installerad. Det ska vara version 2.5+. Detta för att vi ska kunna hämta settings från configen
+till vår servicebus.
+
+- Öppna /Controllers/HomeController.cs och lägg till följande namespaces reference:
+
+using Microsoft.WindowsAzure;
+using Microsoft.ServiceBus;
+using Microsoft.ServiceBus.Messaging;
+
+- Lägg till System.Runtime.Serialization dll som en reference i projektet
+
+- Nu ska vi skapa en servicebus för att kunna köa inkommande händelser till våra worker roles. 
+Desto fler worker roles, desto fler förfrågningar/händelser kan vi hantera samtidigt.
+Vi kan ändra antalet instanser när vi vill vilket gör att applikationen blir väldigt skalbar.
+
+Gå in på portalen och klicka på NEW. Klicka sedan på app services, service bus och queue.
+Välj custom, ge den ett passande namn och lägg den i samma region som din MVCapplikation och
+acceptera sedan.
+
+När din Service Bus har laddat klart, gå in på den och klicka på "Connection information", spara nyckeln.
+
+- Gå tillbaka till visual studio.
+
+- I din solution Explorer, öppna mappen Roles oh dubbelklicka på den av dem. Gå till "settings" och lägg till en ny setting
+med typen string. Döp den till Microsoft.ServiceBus.ConnectionString och klistra in din nyckel i det högra fältet. Repetera detta
+steg även på din andra role.
+
+- I din HomeController.cs Lägg till följande classvariabler.
+
+ //Här hämtar vi ut den connectionstring vi precis har ställt in i våra roles.
+ string connectionString =  CloudConfigurationManager.GetSetting("Microsoft.ServiceBus.ConnectionString");
+ string qname = "signups";
+
+- Lägg till följande kod till i början av Newsletter-metoden
+
+    var nm = NamespaceManager.CreateFromConnectionString(connectionString);
+            QueueDescription qd = new QueueDescription(qname);
+	    //Ställ in Max size på queue på  2GB
+            qd.MaxSizeInMegabytes = 2048;
+	    //Max Time To Live är 5 minuter  
+            qd.DefaultMessageTimeToLive = new TimeSpan(0, 5, 0); 
+
+            if (!nm.QueueExists(qname))
+            {
+                nm.CreateQueue(qd);
+            }
+
+- Nu måste vi lägga till en msg queue.  Lägg till följande kod efte CreateQueue if-blocket som du skapade i föregående steg.
+            //Skicka till queue med hjälp av den connectionstring vi tidigare ställt in i configen
+            QueueClient qc = QueueClient.CreateFromConnectionString(connectionString, qname);
+
+            //Skapa msg med email properaty och skicka till QueueClient
+            var bm = new BrokeredMessage();
+            bm.Properties["email"] = email;
+            qc.Send(bm);
+
+- Nu måste vi uppdatera vår Worker Role. Lägg till följande nameSpacerefs. Även här kan du behöva lägga till servicebus genom NuGet
+
+using Microsoft.ServiceBus;
+using Microsoft.ServiceBus.Messaging;
+
+- Lägg till följande variabler som classvariabler i WorkerRole:RoleEntryPoint :
+
+	//Samma connectionstring och qname som i din webrole.
+	string connectionString = CloudConfigurationManager.GetSetting("Microsoft.ServiceBus.ConnectionString");
+	string qname = "signups";
+
+- Där whileloopen finns i antaingen run eller runasync, lägg till följande kod. Den testar så att meddelandet
+inte är tomt och om det funkar färdigställer den msg. Om det blir problem slänger den msg. Det är i denna 
+try vi kommer att skicka meddelandet till databasen i nästa steg!
+
+//Skapa ny Queueclient
+QueueClient qc = QueueClient.CreateFromConnectionString(connectionString, qname);
+
+//Ta emot det meddelande som kommer från web role.                
+BrokeredMessage msg = qc.Receive();
+
+                if (msg != null)
+                {
+                    try
+                    {
+                        Trace.WriteLine("New Signup processed: " + msg.Properties["email"]);
+                        msg.Complete();
+
+                    }
+                    catch (Exception)
+                    {
+                        // Problem, lås upp message i queue
+                        msg.Abandon();
+                    }
+                }
