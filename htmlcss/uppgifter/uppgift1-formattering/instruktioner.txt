@@ -1,4 +1,4 @@
-Instruktioner för uppgift 1: Formattering
+sInstruktioner för uppgift 1: Formattering
 
 I denna uppgift kommer du att planera och implementera en formatteringsstrategi för sidan. Nedanför listas de uppgifter du måste utföra samt
 information om vilka filer det gäller.
