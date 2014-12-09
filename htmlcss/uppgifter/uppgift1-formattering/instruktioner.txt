@@ -1,0 +1,53 @@
+Instruktioner för uppgift 1: Formattering
+
+I denna uppgift kommer du att planera och implementera en formatteringsstrategi för sidan. Nedanför listas de uppgifter du måste utföra samt
+information om vilka filer det gäller.
+
+
+1.	Gör strategi för att sätta rubriker.
+             a.	Alla sidor
+             b.	Undersök (intro.html, links.html, next.html, reference.html, structure.html and syntax.html) och
+             läs noggrant igenom texten.
+             c.	Bestäm dig för vilket innehåll som ska representeras som rubriker och sedan vilka nivåer dessa ska vara. Fokus ska ligga på
+             att vara konsistent genom alla sidor.
+             d.	Gå igenom alla sidor och formattera om alla rubriker utifrån din strategi.
+
+2.	Formmattera paragrafer
+             a.	På sida: intro.html
+             b.	Bestäm vilket innehåll som ska presenteras som paragrafer och formattera dem sedan därefter. 
+
+3.	Kontrollera radbrytning
+             a.	På sida: next.html
+             b.	På sektionen “learning web design” finns det fyra rekommendationer. Varje rekommendation har en startande mening
+             följt av en förklarande text. använd radbrytning och formatera dessa paragrafer så att dess startande mening börjar på
+             en ny rad.
+
+4.	Bestäm tonvikt
+	     a.	På sida: next.html
+       b. I filen next.html finns det fyra tips i "leraning Web Design"-sektionen. Bestäm hur du bäst kan lägga tonvikt vid den första
+       raden vi varje paragraf. Tänk på olika sätt du kan få den raden att sticka ut för att visa att den är viktigare än resterande
+       delar av paragrafen.
+       c. I den sista paragrafen "break things", gör så att dess citattecken är kursiva. I samma paragraf, lägg tonvikt på den sista raden
+       "Always challenge yourself" så att dess betydelse markeras.
+       d. I listan på tillgångar (resources) nedanför sektionen med olika råd, gör så att alla top-level list item är i fetstil
+	    
+5.	Använda speciella karaktärer (tecken)
+	     a.	På sida: reference.html
+       b. Scrolla ner och hitta den tabell som visar vanliga namngivna tecken ("Common Named Character Entities ").
+	     c.	Öppna sidan i din browser och med hjälp av tabellen, lägg till de teckenn om saknas i rätt kolumner.
+       Koden för dessa ses till höger i tabellen.
+	     d.	I definitionen för Element längre upp på sidan, kapsa in order "tags" in citattecken med vänster- och högercitats specialla tecken (koden för det). Kolla i tabellen för att se dessa.
+			
+6.	Lägga in bilder
+	     a.	På sida: intro.html	 
+	     b.	Scrolla ner till paragrafen “Shortly After the 1.0 specification…”. I början av den paragrafen, lägg in en bild som:
+                  i.	pekar på 200px-W3C_icon.png i _images mappen
+                  ii.	använder alt texten “W3C logo”
+		  iii.	använder värdena 200 för bredd, och 136 för höjd
+		  iv.	använder klassen “flowLeft”			
+					
+När du är färdig med uppgiften räck upp handen under ett eftermiddagspass för att få uppgiften godkänd.
+Du förväntas kunna svara för den kod du skrivit och förklara ditt tänk.
+Ett klartecken kommer att ges om du klarat uppgiften, om inte ges förslag på ändring på plats.
+
+
