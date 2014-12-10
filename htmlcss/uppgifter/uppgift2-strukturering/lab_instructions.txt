@@ -1,18 +1,20 @@
-Challenge instructions for Chapter 04: Structuring Page Content
+Instruktioner för uppgift 2: Strukturering
 
-For this challenge you’ll be planning and implementing a semantic structuring strategy for the entire site based on the work we completed in the chapter. In the steps below I’ll list the tasks you need to perform, as well as the relevant files for each task.
+I denna uppgift ska du planera och implementera en strategi för semantisk struktur. I stegen nedanför får du vidare instruktioner för hur du ska gå till väga.
 
-1.	Determine a structuring strategy.
-             a.	Applies to: structure.htm
-             b.	Open the structure.htm file and explore the page structure and ARIA roles. Write out the document outline, and how structural tags like aside, article, nav, and section are being used.
-             c.	Examine how semantic tags like the header, footer, and main elements are used.
+1.	Bestäm en strategi för struktur
+             a.	På sida: structure.html
+             b. Öppna structure.html och undersök sidan struktur och de ARIA roles som finns. Testa att skriva ut
+             document outline och få en förståelse för hur strukturella taggar likt aside, artivle, nav och section har använts.
+             c. Kolla även hur de semantiska taggarna header, footer och main används.
 
-2.	Structure pages
-             a.	Applies to: all pages
-             b.	Using the strategy devised from the structure.htm file, structure each of the remaining files so that the site uses a consistent, logical structure.
+2.	Strukturera sidorna
+             a.	På sida: alla sidor
+             b. Utifrån den strategi du tagit fram utifrån steg 1, strukturera resten av sidorna så att de har en konsistent
+             och logisk struktur.
 
-3.	Apply ARIA roles
-             a.	Applies to: all pages
-             b.	As you are structuring pages, add ARIA roles to elements when appropriate. 
+3.	Lägg till ARIA roles
+             a.	På sida: alla sidor
+             b.	Lägg till ARIA roles om det är relevant. 
 					
-When you're finished, open up the same files from the "finished_files" directory and compare your results to the finished files. Make sure they match and that the structure is consistent throughout.
+När du är klar, räck upp handen och förklara hur du tänkt när du strukturerat upp efterfrågad sida.

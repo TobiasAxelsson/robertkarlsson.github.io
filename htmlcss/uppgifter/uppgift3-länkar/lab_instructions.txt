@@ -1,12 +1,13 @@
-Challenge instructions for Chapter 05: Creating Links
+Instruktioner för uppgift 3: Länkar
 
-In this challenge, you’ll work on the sample HTML Essential Training reference site to create page navigation, link to external sites, and use fragment identifiers to link to sections within a site.
+I denna uppgift kommer du att skapa en sidnavigation, länka till externa sidor och använda "fragment identifiers" för att 
+länk till sektioner inom en sida.
 
 1.	Bygg sidans navigation
 			a.	På sida: alla sidor
 			b.	Använd dig av dokumentrealtiva länkar,
       Fixa till listan i toppen av dokumenten så att de länkar till rätt sidor inom hemsidan.
-      Se till att lägga till meningsfull beskrivning på varje länk
+      Se till att lägga till meningsfull beskrivning på varje länk med title attributet
       
 2.	Länka till externa sidor
 			a.	På sida: links.html
@@ -17,10 +18,13 @@ In this challenge, you’ll work on the sample HTML Essential Training reference
 			f. Browse to Twitter and find the profile page for @lynda, copy this URL
 			g. Back in the footer, add a link to the follow us on Twitter text for lynda.com that links to the @lynda profile
 
-3.	Link to internal sections
-			a.	Applies to: reference.htm, syntax.htm
-			b.	In the reference.htm page, find the text in the first paragraph that refers to the table of named character entities
-			c. Create a link around that text that jumps to the table at the bottom of the page. Keep in mind that you'll need to modify the table as well to make this work.
-			d. Open the syntax.htm page. 
-			e. At the bottom of the page, locate the text in the last paragraph that mentions the table of named character entities on the reference page.
-			f. Create a link around that text that navigates to the reference page and jumps to that specific section.
+3.	Länka till sektioner inom sidan
+			a.	På sida: reference.html, syntax.html
+			b.	På sida reference.html, 
+      hitta texten i din första paragrafen som refererar till en table med namnet "character entities".
+      c. Skapa en länk runt den texten som hoppar ner till tabellen i botten av sidan. Kom ihåg att du måste modifiera tablen
+      också för att det ska funka.
+			d. Öppna syntax.html. 
+      e. På botten av sidan, lokalisera texten i den sista paragrafen som nämner samma tabell som ovan.
+      f. Skapa en länk runt den texten som navigerar till den sidan och sedan hoppar ner till den specifika sektionen.
+			

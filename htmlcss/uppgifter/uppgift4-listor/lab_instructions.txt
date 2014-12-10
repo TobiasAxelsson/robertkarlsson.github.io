@@ -1,25 +1,29 @@
-Challenge instructions for Chapter 06: Creating Lists
+Instruktioner för uppgift 4: Listor
 
-In this challenge, you’ll work on the sample HTML Essential Training reference site to determine where lists are appropriate and then format the list that's best fits the semantic needs of the content.
+I denna uppgift ska du bestämma vart listor ska sättas samt vilket format som bäst fungerar för semantiken av innehållet.
 
-1.	Examine site navigation
-			a.	Applies to: all pages
-			b.	Examine the top-level navigation for the site. Currently all links are enclosed in an individual paragraph. Is this semantically sound? 
-			c. If not, organize the links into the appropriate list type
+1.	Undersök din navigation
+			a.	På sidor: alla sidor
+			b.	Kolla på navigationen på din sida. Just nu ligger alla referenser till andra sidor i separata paragrafer.
+      Är detta korrekt?
+      c. Om inte, organisera länkarna i rätt typ av lista
 			
-2.	Examine HTML timeline
-			a.	Applies to: intro.htm
-			b.	In the HTML timeline section examine the paragraphs containing relevant dates. Is this the best semantic grouping for this content?
-			c. If not, organize the timeline into the appropriate list type
+2.	Undersök HTML-tidslinjen
+			a.	På sida: intro.html
+      b.  I Sektionen för HTML-tidslinjen är alla datum lagda i paragrafer. Är detta den bästa semantiska strukturen för
+      denna typ av conten?
+      c. Om inte, organisera länkarna i rätt typ av lista
 
-3.	Examine doctype grouping
-			a.	Applies to: syntax.htm
-			b.	Find the section on doctypes
-			c. Examine the three doctypes and their examples. Would a list be the best semantic presentation of this content?
-			d. If so, organize the links into the appropriate list type
+3.	Undersök doctype grouping
+			a.	På sida: syntax.html
+			b.	Hitta sektionen som handlar om doctypes
+      c.  Undersök om de tre doctypen coh dess exempel presenteras på ett korrekt sätt. Skulle en list ha passat bättre?
+			d.  Om du tycker det, lägg till den typ av lista som passar.
 			
-4.	Examine HTML terms
-			a.	Applies to: reference.htm
-			b.	Find the section for HTML terms
-			c. Examine the terms and their descriptions. Is this the best semantic grouping for the content?
-			d. If not, organize the links into the appropriate list type
+4.	Undersök HTML-termer
+			a.	På sida: reference.html
+			b.	Hitta sektionen om HTML-termer
+			c. Undersök termerna och dess beskrivning. Är den gruppering som redan är den semantiskt bästa?
+			d. Om inte, organisera i den typ av lista du tycker funkar bäst
+      
+Räck upp handen och föklara hur du tänk på efterfrågade listor.
