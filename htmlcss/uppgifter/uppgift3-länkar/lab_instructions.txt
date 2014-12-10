@@ -11,13 +11,9 @@ länk till sektioner inom en sida.
       
 2.	Länka till externa sidor
 			a.	På sida: links.html
-			b.	In the footer, locate the first reference to lynda.com
-			c. Create a link that links that text to the actual lynda.com site.
-			d. Modify the link so that the site opens in a new tab or window
-			e. Remember to add descriptive text for the link
-			f. Browse to Twitter and find the profile page for @lynda, copy this URL
-			g. Back in the footer, add a link to the follow us on Twitter text for lynda.com that links to the @lynda profile
-
+			b.	I footern, skapa en länk till google.com
+			c. Modify länken så att den öppnas i en nytt fönster
+			
 3.	Länka till sektioner inom sidan
 			a.	På sida: reference.html, syntax.html
 			b.	På sida reference.html, 
