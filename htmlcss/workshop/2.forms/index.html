@@ -9,8 +9,79 @@
         <link rel="stylesheet" href="css/main.css">
     </head>
     <body>
+      
+      <form action="index.html" method="post">
+        <h1>Signups</h1>
+        <fieldset>
+          <legend><span class="number">1</span> Basic information</legend>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="user_name" placeholder="Jane Doe">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="user_email" placeholder="email@email.com">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="user_password" placeholder="password">
+        </fieldset>
+          
+        <fieldset>
+          <legend><span class="number">2</span> Additional information</legend>
+          <label for="info">Info</label>
+          <textarea id="info" name="user_info">
+        
+        
+          </textarea>
+          <label for="jobroles">Job Role</label>
+          <select id="jobroles" name="user_jobrole">
+            <optgroup label="Programming">
+              <option value="front_end_developer">Front End Developer</option>
+              <option value="back_end_developer">Back End Developer</option>
+              <option value="middle_end_developer">Middle End Developer</option>
+              <option value="full_stack_developer">Full Stack Developer</option>
+            </optgroup>
+            <optgroup label="Other">
+              <option value="economics">Economic</option>
+            </optgroup>
+          </select>
+          
+          <label>Adult?</label>
+          <input type="radio" id="under_18" name="user_age" value="child">
+          <label for="under_18" class="light">Under 18</label>
+          <input type="radio" id="above_18" name="user_age"
+                 value="adult">
+          
+          <label for="above_18" class="light">Above 18</label><br><br>
+          
+          <label>Hobbies</label>
+          
+          <input type="checkbox" id="salsa" name="user_hobbies" value="salse"><label for="salsa" class="light">Salsa</label>
+          <input type="checkbox" id="salsa" name="user_hobbies" value="salse"><label for="salsa" class="light">Salsa</label>
+          <input type="checkbox" id="salsa" name="user_hobbies" value="salse"><label for="salsa" class="light">Salsa</label>
+          <input type="checkbox" id="salsa" name="user_hobbies" value="salse"><label for="salsa" class="light">Salsa</label>
+          <input type="checkbox" id="salsa" name="user_hobbies" value="salse"><label for="salsa" class="light">Salsa</label>
+          
+          
+        </fieldset>
+        
+        <button type="submit">Sign up!</button>
+      
+      </form>
 
       
       
     </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
