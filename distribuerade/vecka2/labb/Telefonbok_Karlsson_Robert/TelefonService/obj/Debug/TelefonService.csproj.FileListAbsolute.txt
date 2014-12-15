@@ -1,0 +1,12 @@
+C:\Users\Robert\Desktop\Skola\Infrastruktur\labbar\labb2\Telefonbok\TelefonService\bin\TelefonService.dll.config
+C:\Users\Robert\Desktop\Skola\Infrastruktur\labbar\labb2\Telefonbok\TelefonService\bin\TelefonService.dll
+C:\Users\Robert\Desktop\Skola\Infrastruktur\labbar\labb2\Telefonbok\TelefonService\bin\TelefonService.pdb
+C:\Users\Robert\Desktop\Skola\Infrastruktur\labbar\labb2\Telefonbok\TelefonService\obj\Debug\TelefonService.csprojResolveAssemblyReference.cache
+C:\Users\Robert\Desktop\Skola\Infrastruktur\labbar\labb2\Telefonbok\TelefonService\obj\Debug\TelefonService.dll
+C:\Users\Robert\Desktop\Skola\Infrastruktur\labbar\labb2\Telefonbok\TelefonService\obj\Debug\TelefonService.pdb
+C:\Users\Robert\Documents\GitHub\robertkarlsson.github.io\distribuerade\vecka2\labb\Telefonbok_Karlsson_Robert\TelefonService\bin\TelefonService.dll.config
+C:\Users\Robert\Documents\GitHub\robertkarlsson.github.io\distribuerade\vecka2\labb\Telefonbok_Karlsson_Robert\TelefonService\bin\TelefonService.dll
+C:\Users\Robert\Documents\GitHub\robertkarlsson.github.io\distribuerade\vecka2\labb\Telefonbok_Karlsson_Robert\TelefonService\bin\TelefonService.pdb
+C:\Users\Robert\Documents\GitHub\robertkarlsson.github.io\distribuerade\vecka2\labb\Telefonbok_Karlsson_Robert\TelefonService\obj\Debug\TelefonService.csprojResolveAssemblyReference.cache
+C:\Users\Robert\Documents\GitHub\robertkarlsson.github.io\distribuerade\vecka2\labb\Telefonbok_Karlsson_Robert\TelefonService\obj\Debug\TelefonService.dll
+C:\Users\Robert\Documents\GitHub\robertkarlsson.github.io\distribuerade\vecka2\labb\Telefonbok_Karlsson_Robert\TelefonService\obj\Debug\TelefonService.pdb
