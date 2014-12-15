@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/uikit.min.css")" rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("~/Scripts/uikit.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/modernizr-1.7.min.js")"></script>
+</head>
+<body>
+    <nav class="uk-navbar">
+        <ul id="menu" class="uk-navbar-nav">
+            <li class="uk-active">@Html.ActionLink("Mina kontakter", "/", "Kontakt")</li>
+            <li>@Html.ActionLink("Lägg till kontakt", "LaggTillKontakt", "Kontakt")</li>
+            <li>@Html.ActionLink("Sök kontakt", "SokKontakter", "Kontakt")</li>
+        </ul>
+    </nav>
+    <section id="main">
+        @RenderBody()
+    </section>
+</body>
+</html>

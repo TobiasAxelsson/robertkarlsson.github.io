@@ -1,0 +1,66 @@
+body {
+  margin:0;
+  background-color: #878787;
+}
+
+#top {background-color: orange;}
+
+
+
+p {
+  color: white;
+  
+}
+
+h1 {font-size: 70px;}
+
+h2 {font-size: 50px;}
+
+h3 {font-size: 30px;}
+
+.t-big {
+  font-size:10em;
+}
+
+.t-blue {color: blue;}
+
+
+.b-forestgreen{background-color:forestgreen;}
+
+
+
+
+
+
+
+
+a:link{color:green;}
+
+a:visited{color: red;}
+
+div:hover{background-color:purple;}
+
+a:active{color:blue;}
+
+*:focus{
+  background-color: cyan;
+  font-size: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
