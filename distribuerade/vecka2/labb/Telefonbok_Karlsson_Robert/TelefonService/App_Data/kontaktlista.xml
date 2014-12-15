@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Kontakter>
-  <Kontakt xmlns="">
-    <Id>3</Id>
-    <Förnamn>asd</Förnamn>
-    <Efternamn>asd</Efternamn>
-    <Telefonnummer>111</Telefonnummer>
-  </Kontakt>
-</Kontakter>
