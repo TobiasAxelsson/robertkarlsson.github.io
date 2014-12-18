@@ -1,0 +1,88 @@
+
+/* Page Styles
+================================ */
+
+* {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+body {
+	font: normal 1.1em/1.5 sans-serif;
+	color: #222;
+	background-color: #edeff0;
+}
+
+/* Layout Element Colors
+================================ */
+
+.main-header       { background-color: #384047; }
+.main-nav a        { background-color: #3f8abf; }
+.main-logo a       { background-color: #5fcf80; }
+.primary-content   { background-color: #caebf6; }
+.main-footer       { background-color: #b7c0c7; }
+
+/* Main Layout
+================================ */
+
+.main-header,
+.col {
+	padding: 20px;
+}
+.main-logo a, 
+.main-nav a {
+	display: block;
+	color: white;
+	text-decoration: none;
+	text-align: center;
+	padding: 8px 15px;
+	border-radius: 5px;
+}
+
+
+
+/* Media Queries
+================================ */
+
+@media (min-width: 1px) and (max-width: 768px) {
+	.main-nav li {
+		margin-top: 15px;
+	}
+	.main-nav li:first-child {
+		margin-top: 0;
+	}
+}
+
+@media (min-width: 769px) {
+
+	body {
+		padding-top: 120px;
+	}
+
+	/* Header Layout
+	================================ */
+
+	.main-header {
+		position: fixed;
+		top: 0;
+		width: 100%;
+		height: 120px;
+	}
+  
+  .main-nav {
+    display: flex;
+    height:100%;
+  }
+  
+  .main-nav li {
+    align-self:center;
+  }
+  
+  .main-logo {
+    margin-right:80px;
+  }
+
+
+
+
+	
+}

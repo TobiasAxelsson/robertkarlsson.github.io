@@ -1,28 +1,46 @@
+/* {
+  border-style: solid;
+  border-width: 2px;
+  border-color: red;
+} */
+
 /* Type Selectors ------------------ */
+html {
+  font-size: 32px
+}
 
 body {
   color: #878787;
   margin: 0;
+  /*font-size: 16px;
+  font-family: 'Tahoma', 'Helvetica', sans-serif;
+  line-height: 1.5;*/
+  
+  font: 16px/1.5 'Droid Serif', 'Tahoma', 'Helvetica', sans-serif;
+  
+  
 }
 
 h1 {  
-  font-size: 90px;
+  font-size: 2rem;
   color: white;
+  text-transform: uppercase;
 }
 
 h2 {
-  font-size: 53px;
+  font-size: 2em;
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 1.5em;
   color: #48525c;
 }
 
 /* Pseudo-classes ------------------ */
 
 a:link {
-  color: orange;
+  color: rgb(255,169,73);
+  text-decoration: none;
 }
 
 a:visited {
@@ -30,7 +48,7 @@ a:visited {
 }
 
 a:hover {
-  color: forestgreen;
+  color: rgba(0,0,0, 0.1)
 }
 
 a:active {
@@ -48,20 +66,51 @@ a:active {
 /* Class Selectors ----------------- */
 
 .main-header {
-  background-color: orange;
+  width: 100%;
+  background-color: #ffa949;
 }
 
 .title {
   color: white;
-  font-size: 26px;
+  font-size: 1.625em; /* 26/16 */
 }
 
 .primary-content {
   text-align: center;
+   margin: auto;
 }
+
+.primary-content,
+.main-header
+{
+  text-align: center;
+ 
+}
+
+.primary-content, 
+.secondary-content
+{
+
+  width: 60%;
+}
+
 
 .t-border {
   border-top: 2px solid lightgrey; /* Top border styles */
+}
+
+.wildlife 
+{
+  color: white;
+  background-color: #7f8c8d;
+  padding: 18% 24%;
+  border-width: 10px;
+  border-style:solid;
+  border-color:#ffa949;
+  
+  border: 10px solid #ffa949;
+ 
+  
 }
 
 

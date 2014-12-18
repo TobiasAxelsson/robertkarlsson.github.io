@@ -1,0 +1,112 @@
+
+/* Page Styles
+================================ */
+
+* {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+body {
+	font: normal 1.1em/1.5 sans-serif;
+	color: #222;
+	background-color: #edeff0;
+}
+
+
+
+/* Layout Element Colors
+================================ */
+
+.main-header       { background-color: #384047; }
+.main-nav a        { background-color: #3f8abf; }
+.main-logo a       { background-color: #5fcf80; }
+.primary-content   { background-color: #caebf6; }
+.secondary-content { background-color: #bfe3d0; }
+.main-footer       { background-color: #b7c0c7; }
+
+/* Main Layout
+================================ */
+
+.main-header,
+.col {
+	padding: 20px;
+}
+.main-logo a, 
+.main-nav a {
+	display: block;
+	color: white;
+	text-decoration: none;
+	text-align: center;
+	padding: 8px 15px;
+	border-radius: 5px;
+	position: relative;
+	overflow: hidden;
+}
+.main-nav a::before {
+	font-family: 'icomoon';
+  	content: attr(data-icon);
+	color: #fff;
+	position: absolute;
+	left: -30%;
+	top: 10px;
+	transition: .4s;
+}
+.main-nav a:hover::before {
+	left: 10%;
+}
+.main-footer {
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+
+/* Imagery
+================================ */
+
+.feat-img {
+	width: 100%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border: solid 1px;
+	padding: 5px;
+}
+
+/* Media Queries
+================================ */
+
+@media (min-width: 1px) and (max-width: 768px) {
+		.main-nav li {
+			margin-top: 15px;
+		}
+		.main-nav li:first-child {
+			margin-top: 0;
+		}
+		.extra-content,
+		.main-banner {
+			display: none;
+		}
+	}
+
+@media (min-width: 769px) {
+
+	body {
+		padding-top: 120px;
+	}
+
+
+
+	/* Column Layout
+	================================ */
+
+	
+
+	/* Imagery
+	================================ */
+
+	.feat-img {
+		width: 50%;
+		float: left;
+		margin-right: 25px;
+	}
+}

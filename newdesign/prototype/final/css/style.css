@@ -269,12 +269,12 @@ body {
   -webkit-perspective: 1200px;
 }
 
-.education-web-development
+body
 {
   transition: -webkit-transform 1s ease-in;
 }
 
-.education-web-development:hover
+body:hover
 {
   -webkit-transform:rotateY(180deg);
 }
