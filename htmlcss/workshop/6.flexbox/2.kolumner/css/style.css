@@ -99,7 +99,19 @@ body {
 	/* Column Layout
 	================================ */
 
-	
+	.content-row {
+    display: flex;
+    
+  }
+  
+  .col {
+    flex: 1;
+  }
+  
+  .primary-content
+  {
+    flex: 2;
+  }
 
 	/* Imagery
 	================================ */
@@ -110,3 +122,21 @@ body {
 		margin-right: 25px;
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
