@@ -1,0 +1,35 @@
+
+/*1 NESTING */
+/*Step 1: Css is valid sass
+
+body {
+  background: red;
+}
+
+*/
+
+/*Step 2: Normal css traversing
+.post h1{
+  font-size:20px;
+  color:blue;
+}
+
+.post p{
+  color: yellow;
+}
+*/
+
+/* Step 3: Nesting with Sass
+.post {
+  h1 {
+    font-size: 20px;
+    color: blue;
+  }
+  p{
+    color: blue;
+  }
+  a{
+    font-size: 200px;
+  }
+}
+*/
