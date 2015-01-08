@@ -1,0 +1,21 @@
+
+body {
+  font-family: sans-serif;
+  font-size: 1.3em;
+  line-height: 1.5;
+}
+.animals, 
+.dogs {
+  width: 200px;
+  float: left;
+  color: #fff;
+  text-align: center;
+  margin: 15px;
+  padding: 75px 0;
+  border-radius: 8px;
+}
+.message_box {
+  clear: left;
+  padding-top: 15px;
+  margin-left: 70px;
+}

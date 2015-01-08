@@ -1,0 +1,16 @@
+/* 1. Skapa en mixin med namnet "button" som har
+*  bakgrundsfärgen #369 och innehållet vitt
+*
+*  2. Nedanför din mixin, gör så att alla <a>
+*  innehåller den.
+*
+*  3. Skriv om din button-mixin så att den tar
+*  emot två argument, $color och $size. Bakgrunden
+*  ska sättas med $color ochh bredden ska sättas
+*  med $size variabeln. Höjden ska vara hälften
+*  av size-variabeln.
+*
+*  4. Använd din nya mixin på klassen .menu_button.
+*  Sätt bakgrundsgärfen till #369 och storleken   
+*  till 50px
+*/

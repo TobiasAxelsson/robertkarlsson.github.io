@@ -1,0 +1,25 @@
+
+body {
+  font-family: Futura, "Trebuchet MS", sans-serif;
+  line-height: 1.5;
+  background: #369;
+}
+body > h1 {
+  color: white;
+  font-size: 2.8em;
+  margin: 0 0 20px;
+}
+.entry {
+  background: white;
+  padding: 5px 20px 20px;
+}
+.sidebar {
+  float: right;
+  background: blue;
+  width: 100px;
+}
+.inner_sidebar {
+  margin-left: auto;
+  margin-right: auto;
+  background: white;
+}
