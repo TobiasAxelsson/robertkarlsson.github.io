@@ -3,6 +3,12 @@ body {
 }
 
 .blog .entry {
+  > h1
+  {
+    color: yellow;
+  }
+  
+  
 	h1 {
 		font-size: 20px;
 		color: blue;
@@ -10,16 +16,17 @@ body {
 	p {
 		font-size: 12px;
 		margin: 20px;
+    
+    html.csscolumns & {
+      column-count: 2;
+		column-gap: 10px;
+		margin: 10px;
+    }
+  
 	}
 	a {
 		color: red;
 	}
 }
 
-html.csscolumns {
-	.blog .entry p {
-		column-count: 2;
-		column-gap: 10px;
-		margin: 10px;
-	}
-}
+ 

@@ -10,6 +10,24 @@
 *  för att repetera det du skrev på 2an.
 * 
 *  4. Lägg till ett undantag så att alla <a> som är
-*  inom en <div> men klassen .footer blir lila 
+*  inom en <div> med .footer blir lila 
 *  länkar.
 /* Skriv din SCSS-kod nedanför. */
+ p {
+   a{
+     color: red;
+   }
+   
+   > a {
+     color: blue;
+   }
+   
+   &:hover {
+     opacity: 0.5;
+   }
+   .footer & a {
+     color: purple;
+   }
+  
+   }
+ 

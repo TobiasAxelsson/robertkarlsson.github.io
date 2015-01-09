@@ -1,0 +1,25 @@
+/*
+* 1. Skriv en mixin som heter cars med två variabler
+* "maker" och "color".
+*
+* 2. Din mixin ska använda värdet i $maker som namnet
+* på en ny klass. Klassen ska ha en helt svar border
+* som är 1 pixel bred.
+*
+* 3. Lägg till en bakgrundsbild i klassen. Sökvägen
+* ska vara images/värdet i $color.png
+*
+* 4. Under den kod du skrivit, skapa en ny variabel
+* $time som har värder "morning".
+*
+* 5. Skriv ett if/else directive som färgar 
+* alla a-element.
+* Om $time är "morning", röd.
+* Om $time är "afternoon", blå.
+* Om något annat, grå.
+*
+* 6. Sist men inte minst, använd "cars"-mixin två gånger
+* med två olika billtillverkare och färger.
+*/
+
+

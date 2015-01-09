@@ -1,0 +1,12 @@
+.post {
+  background-color: red; }
+  .post h1 {
+    font-size: 24px; }
+  .post p {
+    color: blue; }
+    .post p a {
+      color: green; }
+  .post a {
+    text-decoration: none; }
+
+/*# sourceMappingURL=test.css.map */

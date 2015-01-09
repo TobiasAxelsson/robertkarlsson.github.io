@@ -1,27 +1,32 @@
+$primary-color: #12ac34;
+$secondary-color: #eee;
+$margin: 10px;
+
+
 body {
-	background: #333;
+	background: $primary-color;
 	font-family: Futura, "Trebuchet MS", sans-serif;
 	> h1 {
 		font-size: 3em;
-		color: #eee;
-		margin: 5px 0 0 5px;
+		color: $secondary-color;
+		margin: $margin 0 0 $margin;
 	}
 }
 
 .entry {
 	background: white;
-	margin: 5px;
+	margin: $margin;
 	padding: 5px;
 	h1 {
-		font-size: 1.2em;
+		font-size: 1.2em;.
 		margin: 0px;
 	}
 	.date {
 		font-size: 0.3em;
-		color: #333;
+		color: $primary-color;
 	}
 	a {
-		color: #333;
+		color: $primary-color;
 	}
 }
 

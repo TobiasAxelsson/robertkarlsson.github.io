@@ -1,9 +1,12 @@
-.menu, .nav {
-  height: 14px;
-  font-size: 10px; }
-  .menu > div, .nav > div {
-    float: left;
-    clear: none; }
+.h1 {
+  text-decoration: none; }
 
-.menu {
+.menu, .nav {
   background: #345; }
+  .menu p, .nav p {
+    color: cyan; }
+
+.nav {
+  font-size: 20px; }
+
+/*# sourceMappingURL=main.css.map */

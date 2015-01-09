@@ -1,0 +1,26 @@
+@charset "UTF-8";
+/* 1. Anv├ñnd en n├ñstlad selector s├Ñ att alla <a> 
+*  inom <p> blir r├Âda.
+*
+*  2. Anv├ñnd en till n├ñstlad selector f├Âr att g├Âra
+*  alla <a> som ├ñr direkta barn till <p> bl├Ñ.
+*
+*  3. L├ñgg till s├Ñ att alla <a> som ├ñr direkta barn
+*  till <p> f├Ñr en opacity p├Ñ 0.5 vid "hover".
+*  Anv├ñnd dig av en ampersand selector ist├ñllet
+*  f├Âr att repetera det du skrev p├Ñ 2an.
+* 
+*  4. L├ñgg till ett undantag s├Ñ att alla <a> som ├ñr
+*  inom en <div> med .footer blir lila 
+*  l├ñnkar.
+/* Skriv din SCSS-kod nedanf├Âr. */
+p a {
+  color: red; }
+p > a {
+  color: blue; }
+p:hover {
+  opacity: 0.5; }
+div.footer p a {
+  color: purple; }
+
+/*# sourceMappingURL=style.css.map */

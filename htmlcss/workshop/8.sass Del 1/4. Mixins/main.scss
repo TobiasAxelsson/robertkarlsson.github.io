@@ -1,12 +1,39 @@
+@mixin round($radius)
+{
+  border-radius: $radius;
+  border-top-right-radius: $radius * 2;
+  border-bottom-left-radius: $radius * 2;
+}
+
+@mixin super_links($color, $hover)
+{
+  a {
+    color: $color;
+    &:hover {
+      color: $hover;
+    }
+  }
+}
+
+
 .box {
-  border-radius: 4px;
-  border-top-right-radius: 8px;
-  border-bottom-left-radius: 8px;
+  @include round(2px);
 }
 
 // Annan kod
 .button {
-  border-radius: 4px;
-  border-top-right-radius: 8px;
-  border-bottom-left-radius: 8px;
+  @include round(4px);
 }
+
+header
+{
+  background: blue;
+  @include round(10px);
+  @include super_links(yellow, green);
+}
+
+div {
+  @include super_links(purple, #333);
+}
+
+

@@ -1,0 +1,6 @@
+/* Write your SCSS code below. */
+/* Open a scope for <a> tags and make their color 5% lighter than the standard red.*/
+$red: red;
+a {
+color: lighten($red, 5%)
+}

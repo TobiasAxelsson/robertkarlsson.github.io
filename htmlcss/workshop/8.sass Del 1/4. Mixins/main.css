@@ -1,9 +1,26 @@
 .box {
-  border-radius: 4px;
-  border-top-right-radius: 8px;
-  border-bottom-left-radius: 8px; }
+  border-radius: 2px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px; }
 
 .button {
   border-radius: 4px;
   border-top-right-radius: 8px;
   border-bottom-left-radius: 8px; }
+
+header {
+  background: blue;
+  border-radius: 10px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px; }
+  header a {
+    color: yellow; }
+    header a:hover {
+      color: green; }
+
+div a {
+  color: purple; }
+  div a:hover {
+    color: #333; }
+
+/*# sourceMappingURL=main.css.map */
